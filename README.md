@@ -1,11 +1,8 @@
 # TTGProtect
-The discord moderation bot for @everyone, open-source
+TTGProtect added MongoDB
 
 ## Self-Hosting
-1. Clone the repo
-2. Fill out the config file `./Configuration/config.json`
-3. Run `npm install` to install everything required
-4. Run the bot! (`node bot.js`)
+1. git clone https://github.com/ChocolateCode4/TTGMongo.giton your terminal
 
 ## Setting up the dashboard
-Coming Soon
+-
