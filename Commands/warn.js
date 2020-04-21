@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const config = require("../Configuration/config.json");
-
+const Choco = require("../chocomdb.connector.js");
 module.exports = async(bot, msg, args) => {
     let warnUser = msg.mentions.members.first();
     let reason = args.slice(1).join(" ");
@@ -43,4 +43,6 @@ module.exports = async(bot, msg, args) => {
           description: `You've been warned in **${msg.guild.name}** by **${msg.author.username}** with the reason **${reason}**`
           }
         })
+    Choco.user("warnAdd",1,warnUser.user.username,warnUser.user.id)
+    console.log(warnUser.user.username);
 } // No DB Used, simply DM's a mentioned use

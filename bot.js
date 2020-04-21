@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-
 const config = require("./Configuration/config.json");
-
+const Choco = require("./chocomdb.connector.js");
+//refer to this for AL DB collection
 bot.login(config.token);
 
 require("./util/eventLoader.js")(bot);

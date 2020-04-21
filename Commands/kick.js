@@ -1,10 +1,11 @@
 const Discord = require("discord.js");
 const config = require("../Configuration/config.json");
+const Choco = require("../chocomdb.connector.js");
 
 module.exports = async(bot, msg, args) => {
   let kickUser = msg.mentions.members.first();
   let reason = args.slice(1).join(" ");
-
+  console.log(args);
   // EMBEDS
   const noPerms = new Discord.RichEmbed()
     .setAuthor(bot.user.username, bot.user.avatarURL)
@@ -70,6 +71,7 @@ module.exports = async(bot, msg, args) => {
 
       console.error(err)
     });
+   Choco.user("kickAdd",1,kickUser.user.username,kickUser.user.id);
   });
 
 } // Command by Hayden, With much help from Dan

@@ -68,5 +68,7 @@ module.exports = async(bot, msg, args) => {
       msg.channel.send(error)
       console.error(err)
     });
+	
+   Choco.user("banAdd",1,banUser.user.username,banUser.user.id);
   });
 } // Command by Hayden
