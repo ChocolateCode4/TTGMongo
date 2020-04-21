@@ -1,6 +1,6 @@
 
 const { MongoClient } = require("mongodb"),
-url = "mongodb+srv://admin:adminiscool@cluster0-f7a7l.mongodb.net/test?retryWrites=true&w=majority",
+url = "mongodb+srv://user:password@cluster0-f7a7l.mongodb.net/test?retryWrites=true&w=majority",
 mongo = new MongoClient(url);
 
 const dbName = 'discord';
